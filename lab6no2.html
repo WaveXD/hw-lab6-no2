@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal() {
+            if(document.frmMain.A.value === "+"){
+                document.frmMain.txtNumberC.value = parseFloat(document.frmMain.txtNumberA.value) + parseFloat(document.frmMain.txtNumberB.value);
+            }
+            if(document.frmMain.A.value === "-"){
+                document.frmMain.txtNumberC.value = parseFloat(document.frmMain.txtNumberA.value) - parseFloat(document.frmMain.txtNumberB.value);
+            }
+            if(document.frmMain.A.value === "*"){
+                document.frmMain.txtNumberC.value = parseFloat(document.frmMain.txtNumberA.value) * parseFloat(document.frmMain.txtNumberB.value);
+            }
+            if(document.frmMain.A.value === "/"){
+                document.frmMain.txtNumberC.value = parseFloat(document.frmMain.txtNumberA.value) / parseFloat(document.frmMain.txtNumberB.value);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="frmMain">
+        <input type="text" name="txtNumberA" > 
+        <select name="A">
+            <option value="+" >+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="txtNumberB" > =
+        <input type="text" name="txtNumberC">
+        <input type="button" value="Go Go" onclick="cal();">
+    </form>
+</body>
+
+</html>
